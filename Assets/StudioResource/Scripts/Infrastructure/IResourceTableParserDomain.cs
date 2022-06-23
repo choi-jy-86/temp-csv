@@ -6,6 +6,7 @@ using UnityEngine;
 
 namespace StudioResource.Infrastructure
 {
+	// OK @Choi 22.06.23
 	public interface IResourceTableParserDomain
 	{
 		IReadOnlyList<CharacterResourceDataItem> GetCharacterDatas( IReadOnlyList<string> textRow );

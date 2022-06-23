@@ -7,6 +7,7 @@ using UnityEngine;
 
 namespace StudioResource.Infrastructure
 {
+	// OK @Choi 22.06.23
 	public class ResourceTableParserInfrastructure : IResourceTableParserDomain
 	{
 		private List<CharacterResourceDataItem> m_CurrentCharacterList = new List<CharacterResourceDataItem>();
