@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace StudioResource.Editor.Domain
 {
+	// OK @Choi 22.06.23
 	[CreateAssetMenu( fileName = DefaultFileName.Stage, menuName = MenuName.Stage )]
 	public class StageResourceDataTable : ScriptableObject
 	{

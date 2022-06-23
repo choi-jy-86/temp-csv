@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace StudioResource.Domain
 {
+	// OK @Choi 22.06.23
 	public static class ResourceTableName
 	{
 		public static readonly string CharacterResourceTable = "CharacterResourceTable";
@@ -53,7 +54,8 @@ namespace StudioResource.Domain
 		Stage,
 		Character,
 		Prop,
-		FaceIcon
+		FaceIcon,
+		Table
 	}
 
 	public enum ResourceServerEnvironment

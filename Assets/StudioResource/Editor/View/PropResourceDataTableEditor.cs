@@ -1,13 +1,12 @@
-﻿using EditorGUITable;
-using StudioResource.Editor.Domain;
+﻿using StudioResource.Editor.Domain;
 using StudioResource.Editor.Infrastructure;
 using StudioResource.Infrastructure;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor;
 
 namespace StudioResource.Editor
 {
+	// OK @Choi 22.06.23
 #if UNITY_EDITOR
 	[UnityEditor.CustomEditor( typeof( PropResourceDataTable ) )]
 	public class PropResourceDataTableEditor : ResourceDataTableEditor

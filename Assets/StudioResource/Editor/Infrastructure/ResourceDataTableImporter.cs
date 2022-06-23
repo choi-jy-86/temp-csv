@@ -1,15 +1,13 @@
 ﻿using SFB;
-using StudioResource.Domain;
 using StudioResource.Editor.Domain;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using UnityEngine;
 
 namespace StudioResource.Editor.Infrastructure
 {
-    public class ResourceDataTableImporter : IResourceDataTableImporter
+	// OK @Choi 22.06.23
+	public class ResourceDataTableImporter : IResourceDataTableImporter
     {
 		public IReadOnlyList<string> GetRawTextFromFile()
 		{

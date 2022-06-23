@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace StudioResource.Editor.Domain
 {
+	// OK @Choi 22.06.23
 	[CreateAssetMenu( fileName = DefaultFileName.Prop, menuName = MenuName.Prop )]
 	public class PropResourceDataTable : ScriptableObject
 	{

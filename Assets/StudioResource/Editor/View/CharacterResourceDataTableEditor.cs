@@ -6,6 +6,7 @@ using System.Linq;
 
 namespace StudioResource.Editor
 {
+	// OK @Choi 22.06.23
 #if UNITY_EDITOR
 	[UnityEditor.CustomEditor( typeof( CharacterResourceDataTable ) )]
 	public class CharacterResourceDataTableEditor : ResourceDataTableEditor

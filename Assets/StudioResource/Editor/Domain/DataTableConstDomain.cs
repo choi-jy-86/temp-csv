@@ -1,16 +1,9 @@
 ﻿using StudioResource.Domain;
-using System;
 using System.Collections.Generic;
 
 namespace StudioResource.Editor.Domain
 {
-	public enum ResourceType
-	{
-		Stage,
-		Character,
-		Prop,
-	}
-
+	// OK @Choi 22.06.23
 	public enum ResourceFileType
 	{
 		Character,
@@ -49,9 +42,9 @@ namespace StudioResource.Editor.Domain
 		public const string PropCategory = "propCategory";
 		public const string PropKeywords = "propKeywords";
 
+		public const string CharacterKeywords = "characterKeywords";
 		public const string GenerationKeyword = "generationKeyword";
 		public const string GenerationDisplayName = "generationDisplayName";
-		public const string CharacterKeywords = "characterKeywords";
 
 		public const string StageCategory = "stageCategory";
 		public const string StageCategoryDisplayName = "stageCategoryDisplayName";

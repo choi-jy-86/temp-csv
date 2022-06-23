@@ -4,6 +4,7 @@ using UnityEditor;
 
 namespace StudioResource.Domain
 {
+    // OK @Choi 22.06.23
     public static class ResourceDataTableUtil
     {
         public static bool Contains( SerializedProperty lineProp, string propertyName, int hitBits )
@@ -22,7 +23,7 @@ namespace StudioResource.Domain
         {
             var origin = originValue.ToInt64(System.Globalization.CultureInfo.InvariantCulture);
             var target = targetValue.ToInt64(System.Globalization.CultureInfo.InvariantCulture);
-            var retVal = bool.TryParse( value, out bool isFlag ) && isFlag
+            var retVal = int.TryParse(value, out int intVal) && intVal == 1
             ? (origin | target)
             : origin;
             return ( T )Enum.ToObject( typeof( T ), retVal );

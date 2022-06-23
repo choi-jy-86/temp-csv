@@ -7,7 +7,8 @@ using StudioResource.Editor.Infrastructure;
 
 namespace StudioResource.Editor
 {
-	using StudioResource.Domain;
+    // OK @Choi 22.06.23
+    using StudioResource.Domain;
 #if UNITY_EDITOR
 	using UnityEditor;
     public abstract class ResourceDataTableEditor : UnityEditor.Editor

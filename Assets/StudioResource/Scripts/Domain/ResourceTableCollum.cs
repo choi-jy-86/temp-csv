@@ -1,5 +1,6 @@
 ﻿namespace StudioResource.Domain
 {
+	// OK @Choi 22.06.23
 	public enum CharacterTableCollumn
 	{
 		DisplayName,    // 値 : 表示名
