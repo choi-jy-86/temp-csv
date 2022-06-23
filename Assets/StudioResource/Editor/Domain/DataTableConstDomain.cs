@@ -54,7 +54,7 @@ namespace StudioResource.Editor.Domain
 		public const string CharacterKeywords = "characterKeywords";
 
 		public const string StageCategory = "stageCategory";
-		public const string StageCategoryJapanese = "stageCategoryDisplayName";
+		public const string StageCategoryDisplayName = "stageCategoryDisplayName";
 		public const string StageKeywords = "stageKeywords";
 
 		public static List<string> PropColumnsPropertyNames = new List<string>()
@@ -89,36 +89,12 @@ namespace StudioResource.Editor.Domain
 				ResourceName,
 				ResourceType,
 				StageCategory,
-				StageCategoryJapanese,
+				StageCategoryDisplayName,
 				StageKeywords,
 				GimmickKeywords,
 				IsVisiable,
 				PermissionKeywords,
 				ExternalID,
-			};
-
-		public static Dictionary<CharacterGeneration, string> CharacterGenerationMapper = new Dictionary<CharacterGeneration, string>()
-			{
-				{ CharacterGeneration.Hololive_0, "ホロライブ0期生"},
-				{ CharacterGeneration.Hololive_1, "ホロライブ1期生"},
-				{ CharacterGeneration.Hololive_2, "ホロライブ2期生"},
-				{ CharacterGeneration.Hololive_3, "ホロライブ3期生"},
-				{ CharacterGeneration.Hololive_4, "ホロライブ4期生"},
-				{ CharacterGeneration.Hololive_5, "ホロライブ5期生"},
-				{ CharacterGeneration.Holo_Gamer, "ホロゲーマー"},
-				{ CharacterGeneration.Holo_X, "ホロX"},
-				{ CharacterGeneration.HololiveEN_1, "ホロEN1期生"},
-				{ CharacterGeneration.HololiveEN_Hope, "ホロEN_HOPE"},
-				{ CharacterGeneration.HololiveEN_2, "ホロEN2期生"},
-				{ CharacterGeneration.HololiveID_1, "ホロID1期生"},
-				{ CharacterGeneration.HololiveID_2, "ホロID2期生"},
-				{ CharacterGeneration.HololiveID_3, "ホロID3期生"},
-				{ CharacterGeneration.Staff, "STAFF"},
-				{ CharacterGeneration.HoloStars_1, "ホロスターズ1期生"},
-				{ CharacterGeneration.HoloStars_2, "ホロスターズ2期生"},
-				{ CharacterGeneration.HoloStars_3, "ホロスターズ3期生"},
-				{ CharacterGeneration.HoloStars_UPR, "ホロスターズUPROAR"},
-				{ CharacterGeneration.Guest, "ゲスト"},
 			};
 	}
 }

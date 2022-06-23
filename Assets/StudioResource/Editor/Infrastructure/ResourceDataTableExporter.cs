@@ -127,7 +127,7 @@ namespace StudioResource.Editor.Infrastructure
 						row += $"{value.generationKeyword},";
 						break;
 					case ( int )CharacterTableCollumn.GenDisplay:
-						row += $"{DataTableConstValue.CharacterGenerationMapper[value.generationKeyword]},";
+						row += $"{ResourceTableConstValue.CharacterGenerationMapper[value.generationKeyword]},";
 						break;
 
 					case ( int )CharacterTableCollumn.Normal:
