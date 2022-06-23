@@ -1,23 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using StudioResource.Domain;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace StudioResource.Editor.Domain
 {
-    [System.Serializable]
-	public struct StageResourceDataItem
-	{
-		public string displayName;
-		public string resourceName;
-		public ResourceFileType resourceType;
-		public StageCategory stageCategory;
-		public string stageCategoryJapanese;
-		public StageKeywords stageKeywords;
-		public StageGimmickKeywords gimmickKeywords;
-		public bool isVisiable;
-		public PermissionKeywords permissionKeywords;
-		public string externalId;
-	}
-
 	[CreateAssetMenu( fileName = DefaultFileName.Stage, menuName = MenuName.Stage )]
 	public class StageResourceDataTable : ScriptableObject
 	{

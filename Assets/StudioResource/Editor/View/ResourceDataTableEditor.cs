@@ -7,8 +7,9 @@ using StudioResource.Editor.Infrastructure;
 
 namespace StudioResource.Editor
 {
+	using StudioResource.Domain;
 #if UNITY_EDITOR
-    using UnityEditor;
+	using UnityEditor;
     public abstract class ResourceDataTableEditor : UnityEditor.Editor
     {
         private GUITableState m_State;

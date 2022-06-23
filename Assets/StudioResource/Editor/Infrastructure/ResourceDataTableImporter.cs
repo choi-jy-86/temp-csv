@@ -1,4 +1,5 @@
 ﻿using SFB;
+using StudioResource.Domain;
 using StudioResource.Editor.Domain;
 using System;
 using System.Collections;
@@ -99,7 +100,7 @@ namespace StudioResource.Editor.Infrastructure
 			var datas = value.Split(',');
 			result.displayName = datas[( int )PropTableCollum.DisplayName];
 			result.resourceName = datas[( int )PropTableCollum.ResourceName];
-			result.resourceType = Enum.TryParse( datas[( int )PropTableCollum.ResourceType], out ResourceFileType resourceType )
+			result.resourceType = Enum.TryParse( datas[( int )PropTableCollum.ResourceType], out StudioResource.Domain.ResourceFileType resourceType )
 				? resourceType
 				: default;
 
@@ -124,7 +125,7 @@ namespace StudioResource.Editor.Infrastructure
 			var datas = value.Split(',');
 			result.displayName = datas[( int )CharacterTableCollum.DisplayName];
 			result.resourceName = datas[( int )CharacterTableCollum.ResourceName];
-			result.resourceType = Enum.TryParse( datas[( int )CharacterTableCollum.ResourceType], out ResourceFileType resourceType )
+			result.resourceType = Enum.TryParse( datas[( int )CharacterTableCollum.ResourceType], out StudioResource.Domain.ResourceFileType resourceType )
 				? resourceType
 				: default;
 
@@ -149,7 +150,7 @@ namespace StudioResource.Editor.Infrastructure
 			var datas = value.Split(',');
 			result.displayName = datas[( int )StageTableCollum.DisplayName];
 			result.resourceName = datas[( int )StageTableCollum.ResourceName];
-			result.resourceType = Enum.TryParse( datas[( int )StageTableCollum.ResourceType], out ResourceFileType resourceType )
+			result.resourceType = Enum.TryParse( datas[( int )StageTableCollum.ResourceType], out StudioResource.Domain.ResourceFileType resourceType )
 				? resourceType
 				: default;
 

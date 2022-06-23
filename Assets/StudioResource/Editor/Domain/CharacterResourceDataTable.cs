@@ -1,22 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using StudioResource.Domain;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace StudioResource.Editor.Domain
 {
-    [System.Serializable]
-    public struct CharacterResourceDataItem
-    {
-        public string displayName;
-        public string resourceName;
-        public ResourceFileType resourceType;
-        public CharacterGeneration generationEnglish;
-        public string generationJapanese;
-        public CharacterKeywords characterKeywords;
-        public bool isVisiable;
-        public PermissionKeywords permissionKeywords;
-        public string externalId;
-    }
-
     [CreateAssetMenu( fileName = DefaultFileName.Character, menuName = MenuName.Character )]
     public class CharacterResourceDataTable : ScriptableObject
     {

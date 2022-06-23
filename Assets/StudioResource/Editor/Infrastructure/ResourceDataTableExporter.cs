@@ -1,4 +1,5 @@
 ﻿using SFB;
+using StudioResource.Domain;
 using StudioResource.Editor.Domain;
 using System.Collections;
 using System.Collections.Generic;

@@ -1,22 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using StudioResource.Domain;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace StudioResource.Editor.Domain
 {
-	[System.Serializable]
-	public struct PropResourceDataItem
-	{
-		public string displayName;
-		public string resourceName;
-		public ResourceFileType resourceType;
-		public PropResourceCategory propCategory;
-		public PropKeywords propKeywords;
-		public PropGimmickKeywords gimmickKeywords;
-		public bool isVisiable;
-		public PermissionKeywords permissionKeywords;
-		public string externalId;
-	}
-
 	[CreateAssetMenu( fileName = DefaultFileName.Prop, menuName = MenuName.Prop )]
 	public class PropResourceDataTable : ScriptableObject
 	{
