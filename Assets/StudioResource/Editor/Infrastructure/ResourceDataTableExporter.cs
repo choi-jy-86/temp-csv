@@ -107,60 +107,60 @@ namespace StudioResource.Editor.Infrastructure
 		private string ConvertCharacterItemToCsvRow( CharacterResourceDataItem value )
 		{
 			var row = string.Empty;
-			var length = System.Enum.GetNames(typeof(CharacterTableCollum)).Length;
+			var length = System.Enum.GetNames(typeof(CharacterTableCollumn)).Length;
 			for( int i = 0; i < length; i++ )
 			{
 				var bolleanString = string.Empty;
 				switch( i )
 				{
-					case ( int )CharacterTableCollum.DisplayName:
+					case ( int )CharacterTableCollumn.DisplayName:
 						row += $"{value.displayName},";
 						break;
-					case ( int )CharacterTableCollum.ResourceName:
+					case ( int )CharacterTableCollumn.ResourceName:
 						row += $"{value.resourceName},";
 						break;
-					case ( int )CharacterTableCollum.ResourceType:
+					case ( int )CharacterTableCollumn.ResourceType:
 						row += $"{value.resourceType},";
 						break;
 
-					case ( int )CharacterTableCollum.GenEnglish:
-						row += $"{value.generationEnglish},";
+					case ( int )CharacterTableCollumn.GenEnglish:
+						row += $"{value.generationKeyword},";
 						break;
-					case ( int )CharacterTableCollum.GenJapanese:
-						row += $"{DataTableConstValue.CharacterGenerationMapper[value.generationEnglish]},";
+					case ( int )CharacterTableCollumn.GenDisplay:
+						row += $"{DataTableConstValue.CharacterGenerationMapper[value.generationKeyword]},";
 						break;
 
-					case ( int )CharacterTableCollum.Normal:
+					case ( int )CharacterTableCollumn.Normal:
 						row += $"{value.characterKeywords.HasFlag( CharacterKeywords.Normal )},";
 						break;
-					case ( int )CharacterTableCollum.NSS:
+					case ( int )CharacterTableCollumn.NSS:
 						row += $"{value.characterKeywords.HasFlag( CharacterKeywords.NSS )},";
 						break;
-					case ( int )CharacterTableCollum.Swim:
+					case ( int )CharacterTableCollumn.Swim:
 						row += $"{value.characterKeywords.HasFlag( CharacterKeywords.Swim )},";
 						break;
-					case ( int )CharacterTableCollum.Uniform:
+					case ( int )CharacterTableCollumn.Uniform:
 						row += $"{value.characterKeywords.HasFlag( CharacterKeywords.Uniform )},";
 						break;
-					case ( int )CharacterTableCollum.Sihuku:
+					case ( int )CharacterTableCollumn.Sihuku:
 						row += $"{value.characterKeywords.HasFlag( CharacterKeywords.Sihuku )},";
 						break;
-					case ( int )CharacterTableCollum.OtherVersion:
+					case ( int )CharacterTableCollumn.OtherVersion:
 						row += $"{value.characterKeywords.HasFlag( CharacterKeywords.OtherVersion )},";
 						break;
 
-					case ( int )CharacterTableCollum.Visiable:
+					case ( int )CharacterTableCollumn.Visiable:
 						row += $"{value.isVisiable},";
 						break;
 
-					case ( int )CharacterTableCollum.Studio:
+					case ( int )CharacterTableCollumn.Studio:
 						row += $"{value.permissionKeywords.HasFlag( PermissionKeywords.Studio )},";
 						break;
-					case ( int )CharacterTableCollum.Viewer:
+					case ( int )CharacterTableCollumn.Viewer:
 						row += $"{value.permissionKeywords.HasFlag( PermissionKeywords.Viewer )},";
 						break;
 
-					case ( int )CharacterTableCollum.ExternalID:
+					case ( int )CharacterTableCollumn.ExternalID:
 						row += $"{value.externalId},";
 						break;
 				}
@@ -171,96 +171,96 @@ namespace StudioResource.Editor.Infrastructure
 		private string ConvertPropItemToCsvRow(PropResourceDataItem value)
 		{
 			var row = string.Empty;
-			var length = System.Enum.GetNames(typeof(PropTableCollum)).Length;
+			var length = System.Enum.GetNames(typeof(PropTableCollumn)).Length;
 			for(int i = 0; i < length; i++ )
 			{
 				var bolleanString = string.Empty;
 				switch(i)
 				{
-					case ( int )PropTableCollum.DisplayName:
+					case ( int )PropTableCollumn.DisplayName:
 						row += $"{value.displayName},";
 						break;
-					case ( int )PropTableCollum.ResourceName:
+					case ( int )PropTableCollumn.ResourceName:
 						row += $"{value.resourceName},";
 						break;
-					case ( int )PropTableCollum.ResourceType:
+					case ( int )PropTableCollumn.ResourceType:
 						row += $"{value.resourceType},";
 						break;
-					case ( int )PropTableCollum.PropCategory:
+					case ( int )PropTableCollumn.PropCategory:
 						row += $"{value.propCategory},";
 						break;
 
-					case ( int )PropTableCollum.Instruments:
+					case ( int )PropTableCollumn.Instruments:
 						row += $"{value.propKeywords.HasFlag( PropKeywords.Instruments )},";
 						break;
-					case ( int )PropTableCollum.Furnitures:
+					case ( int )PropTableCollumn.Furnitures:
 						row += $"{value.propKeywords.HasFlag( PropKeywords.Furnitures )},";
 						break;
-					case ( int )PropTableCollum.Popup:
+					case ( int )PropTableCollumn.Popup:
 						row += $"{value.propKeywords.HasFlag( PropKeywords.Popup )},";
 						break;
-					case ( int )PropTableCollum.Game:
+					case ( int )PropTableCollumn.Game:
 						row += $"{value.propKeywords.HasFlag( PropKeywords.Game )},";
 						break;
-					case ( int )PropTableCollum.Effect:
+					case ( int )PropTableCollumn.Effect:
 						row += $"{value.propKeywords.HasFlag( PropKeywords.Effect )},";
 						break;
-					case ( int )PropTableCollum.PropLarge:
+					case ( int )PropTableCollumn.PropLarge:
 						row += $"{value.propKeywords.HasFlag( PropKeywords.PropLarge )},";
 						break;
-					case ( int )PropTableCollum.Maskot:
+					case ( int )PropTableCollumn.Maskot:
 						row += $"{value.propKeywords.HasFlag( PropKeywords.Maskot )},";
 						break;
-					case ( int )PropTableCollum.StageOption:
+					case ( int )PropTableCollumn.StageOption:
 						row += $"{value.propKeywords.HasFlag( PropKeywords.StageOption )},";
 						break;
-					case ( int )PropTableCollum.Accessories:
+					case ( int )PropTableCollumn.Accessories:
 						row += $"{value.propKeywords.HasFlag( PropKeywords.Accessories )},";
 						break;
-					case ( int )PropTableCollum.Ornaments:
+					case ( int )PropTableCollumn.Ornaments:
 						row += $"{value.propKeywords.HasFlag( PropKeywords.Ornaments )},";
 						break;
-					case ( int )PropTableCollum.Season:
+					case ( int )PropTableCollumn.Season:
 						row += $"{value.propKeywords.HasFlag( PropKeywords.Season )},";
 						break;
-					case ( int )PropTableCollum.Equipment:
+					case ( int )PropTableCollumn.Equipment:
 						row += $"{value.propKeywords.HasFlag( PropKeywords.Equipment )},";
 						break;
 
-					case ( int )PropTableCollum.SuperChat:
+					case ( int )PropTableCollumn.SuperChat:
 						row += $"{value.gimmickKeywords.HasFlag( PropGimmickKeywords.SuperChat )},";
 						break;
-					case ( int )PropTableCollum.Spawner:
+					case ( int )PropTableCollumn.Spawner:
 						row += $"{value.gimmickKeywords.HasFlag( PropGimmickKeywords.Spawner )},";
 						break;
-					case ( int )PropTableCollum.Display:
+					case ( int )PropTableCollumn.Display:
 						row += $"{value.gimmickKeywords.HasFlag( PropGimmickKeywords.Display )},";
 						break;
-					case ( int )PropTableCollum.Download:
+					case ( int )PropTableCollumn.Download:
 						row += $"{value.gimmickKeywords.HasFlag( PropGimmickKeywords.Download )},";
 						break;
-					case ( int )PropTableCollum.Weapons:
+					case ( int )PropTableCollumn.Weapons:
 						row += $"{value.gimmickKeywords.HasFlag( PropGimmickKeywords.Weapons )},";
 						break;
-					case ( int )PropTableCollum.Basical:
+					case ( int )PropTableCollumn.Basical:
 						row += $"{value.gimmickKeywords.HasFlag( PropGimmickKeywords.Basical )},";
 						break;
-					case ( int )PropTableCollum.Motion:
+					case ( int )PropTableCollumn.Motion:
 						row += $"{value.gimmickKeywords.HasFlag( PropGimmickKeywords.Motion )},";
 						break;
 
-					case ( int )PropTableCollum.Visiable:
+					case ( int )PropTableCollumn.Visiable:
 						row += $"{value.isVisiable},";
 						break;
 
-					case ( int )PropTableCollum.Studio:
+					case ( int )PropTableCollumn.Studio:
 						row += $"{value.permissionKeywords.HasFlag( PermissionKeywords.Studio )},";
 						break;
-					case ( int )PropTableCollum.Viewer:
+					case ( int )PropTableCollumn.Viewer:
 						row += $"{value.permissionKeywords.HasFlag( PermissionKeywords.Viewer )},";
 						break;
 
-					case ( int )PropTableCollum.ExternalID:
+					case ( int )PropTableCollumn.ExternalID:
 						row += $"{value.externalId},";
 						break;
 				}
@@ -271,73 +271,73 @@ namespace StudioResource.Editor.Infrastructure
 		private string ConvertStageItemToCsvRow( StageResourceDataItem value )
 		{
 			var row = string.Empty;
-			var length = System.Enum.GetNames(typeof(StageTableCollum)).Length;
+			var length = System.Enum.GetNames(typeof(StageTableCollumn)).Length;
 			for( int i = 0; i < length; i++ )
 			{
 				var bolleanString = string.Empty;
 				switch( i )
 				{
-					case ( int )StageTableCollum.DisplayName:
+					case ( int )StageTableCollumn.DisplayName:
 						row += $"{value.displayName},";
 						break;
-					case ( int )StageTableCollum.ResourceName:
+					case ( int )StageTableCollumn.ResourceName:
 						row += $"{value.resourceName},";
 						break;
-					case ( int )StageTableCollum.ResourceType:
+					case ( int )StageTableCollumn.ResourceType:
 						row += $"{value.resourceType},";
 						break;
-					case ( int )StageTableCollum.StageCategory:
+					case ( int )StageTableCollumn.StageCategory:
 						row += $"{value.stageCategory},";
 						break;
-					case ( int )StageTableCollum.StageCategoryJP:
-						row += $"{value.stageCategoryJapanese},";
+					case ( int )StageTableCollumn.StageCategoryJP:
+						row += $"{value.stageCategoryDisplayName},";
 						break;
 
-					case ( int )StageTableCollum.Hololive:
+					case ( int )StageTableCollumn.Hololive:
 						row += $"{value.stageKeywords.HasFlag( StageKeywords.Hololive )},";
 						break;
-					case ( int )StageTableCollum.HoloStars:
+					case ( int )StageTableCollumn.HoloStars:
 						row += $"{value.stageKeywords.HasFlag( StageKeywords.HoloStars )},";
 						break;
-					case ( int )StageTableCollum.Event:
+					case ( int )StageTableCollumn.Event:
 						row += $"{value.stageKeywords.HasFlag( StageKeywords.Event )},";
 						break;
-					case ( int )StageTableCollum.Season:
+					case ( int )StageTableCollumn.Season:
 						row += $"{value.stageKeywords.HasFlag( StageKeywords.Season )},";
 						break;
-					case ( int )StageTableCollum.Personal:
+					case ( int )StageTableCollumn.Personal:
 						row += $"{value.stageKeywords.HasFlag( StageKeywords.Personal )},";
 						break;
 
-					case ( int )StageTableCollum.Lighting:
+					case ( int )StageTableCollumn.Lighting:
 						row += $"{value.gimmickKeywords.HasFlag( StageGimmickKeywords.Lighting )},";
 						break;
-					case ( int )StageTableCollum.DiplayShare:
+					case ( int )StageTableCollumn.DiplayShare:
 						row += $"{value.gimmickKeywords.HasFlag( StageGimmickKeywords.DiplayShare )},";
 						break;
-					case ( int )StageTableCollum.ContentsPlay:
+					case ( int )StageTableCollumn.ContentsPlay:
 						row += $"{value.gimmickKeywords.HasFlag( StageGimmickKeywords.ContentsPlay )},";
 						break;
-					case ( int )StageTableCollum.Game:
+					case ( int )StageTableCollumn.Game:
 						row += $"{value.gimmickKeywords.HasFlag( StageGimmickKeywords.Game )},";
 						break;
-					case ( int )StageTableCollum.Patricle:
+					case ( int )StageTableCollumn.Patricle:
 						row += $"{value.gimmickKeywords.HasFlag( StageGimmickKeywords.Patricle )},";
 						break;
-					case ( int )StageTableCollum.ObjectOnOff:
+					case ( int )StageTableCollumn.ObjectOnOff:
 						row += $"{value.gimmickKeywords.HasFlag( StageGimmickKeywords.ObjectOnOff )},";
 						break;
-					case ( int )StageTableCollum.Visiable:
+					case ( int )StageTableCollumn.Visiable:
 						row += $"{value.isVisiable},";
 						break;
-					case ( int )StageTableCollum.Studio:
+					case ( int )StageTableCollumn.Studio:
 						row += $"{value.permissionKeywords.HasFlag( PermissionKeywords.Studio )},";
 						break;
-					case ( int )StageTableCollum.Viewer:
+					case ( int )StageTableCollumn.Viewer:
 						row += $"{value.permissionKeywords.HasFlag( PermissionKeywords.Viewer )},";
 						break;
 
-					case ( int )StageTableCollum.ExternalID:
+					case ( int )StageTableCollumn.ExternalID:
 						row += $"{value.externalId},";
 						break;
 				}

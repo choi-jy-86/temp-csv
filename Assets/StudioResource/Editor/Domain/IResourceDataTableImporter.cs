@@ -5,8 +5,6 @@ namespace StudioResource.Editor.Domain
 {
 	public interface IResourceDataTableImporter
 	{
-		IList<CharacterResourceDataItem> GetCharacterDatas();
-		IList<StageResourceDataItem> GetStageDatas();
-		IList<PropResourceDataItem> GetPropDatas();
+		IReadOnlyList<string> GetRawTextFromFile();
 	}
 }

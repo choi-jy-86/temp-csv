@@ -1,7 +1,9 @@
 ﻿using EditorGUITable;
 using StudioResource.Editor.Domain;
 using StudioResource.Editor.Infrastructure;
+using StudioResource.Infrastructure;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 
 namespace StudioResource.Editor
@@ -12,6 +14,7 @@ namespace StudioResource.Editor
 	{
 		private IResourceDataTableImporter m_Converter = new ResourceDataTableImporter();
 		private IResourceDataTableExporter m_Exporter = new ResourceDataTableExporter();
+		private IResourceTableParserDomain m_Parser = new ResourceTableParserInfrastructure();
 
 		private PropResourceDataTable m_Data;
 
@@ -23,7 +26,8 @@ namespace StudioResource.Editor
 		public override void LoadProcess()
 		{
 			m_Data.ClearAllItem();
-			m_Data.AddItems( m_Converter.GetPropDatas() );
+			var textRow = m_Converter.GetRawTextFromFile();
+			m_Data.AddItems( m_Parser.GetPropDatas( textRow ).ToList() );
 		}
 
 		public override void SaveProcess()

@@ -11,101 +11,6 @@ namespace StudioResource.Editor.Domain
 		Prop,
 	}
 
-	public enum CharacterTableCollum
-	{
-		DisplayName,    // 値 : 表示名
-		ResourceName,   // 値 : Reousrce 名
-		ResourceType,   // 値 : Reousrce Type
-
-		GenEnglish,     // 値 : Generation EN
-		GenJapanese,    // 値 : Generation JP
-
-		// 以下、CharacterKeywords
-		Normal,
-		NSS,
-		Swim,
-		Uniform,
-		Sihuku,
-		OtherVersion,
-
-		Visiable,   // 値 : 閲覧可能 Flag
-
-		// 以下、Permission
-		Studio,
-		Viewer,
-
-		ExternalID, // 値 : 外注先固有ID
-	}
-
-	public enum StageTableCollum
-	{
-		DisplayName,		// 値 : 表示名
-		ResourceName,		// 値 : Reousrce 名
-		ResourceType,		// 値 : Reousrce Type
-		StageCategory,		// 値 : Reousrce Category
-		StageCategoryJP,	// 値 : Reousrce Category
-
-		// 以下、StageKeywords
-		Hololive,
-		HoloStars,
-		Event,
-		Season,
-		Personal,
-
-		// 以下、GimmickKeywords
-		Lighting,
-		DiplayShare,
-		ContentsPlay,
-		Game,
-		Patricle,
-		ObjectOnOff,
-
-		Visiable,   // 値 : 閲覧可能 Flag
-					// 以下、Permission
-		Studio,
-		Viewer,
-
-		ExternalID, // 値 : 外注先固有ID
-	}
-
-	public enum PropTableCollum
-	{
-		DisplayName,    // 値 : 表示名
-		ResourceName,   // 値 : Reousrce 名
-		ResourceType,   // 値 : Reousrce Type
-		PropCategory,   // 値 : Reousrce Category
-
-		// 以下、PropKeywords
-		Instruments,
-		Furnitures,
-		Popup,
-		Game,
-		Effect,
-		PropLarge,
-		Maskot,
-		StageOption,
-		Accessories,
-		Ornaments,
-		Season,
-		Equipment,
-
-		// 以下、GimmickKeywords
-		SuperChat,
-		Spawner,
-		Display,
-		Download,
-		Weapons,
-		Basical,
-		Motion,
-
-		Visiable,   // 値 : 閲覧可能 Flag
-					// 以下、Permission
-		Studio,
-		Viewer,
-
-		ExternalID, // 値 : 外注先固有ID
-	}
-
 	public enum ResourceFileType
 	{
 		Character,
@@ -135,6 +40,7 @@ namespace StudioResource.Editor.Domain
 		public const string DisplayName = "displayName";
 		public const string ResourceName = "resourceName";
 		public const string ResourceType = "resourceType";
+
 		public const string GimmickKeywords = "gimmickKeywords";
 		public const string IsVisiable = "isVisiable";
 		public const string PermissionKeywords = "permissionKeywords";
@@ -143,12 +49,12 @@ namespace StudioResource.Editor.Domain
 		public const string PropCategory = "propCategory";
 		public const string PropKeywords = "propKeywords";
 
+		public const string GenerationKeyword = "generationKeyword";
+		public const string GenerationDisplayName = "generationDisplayName";
 		public const string CharacterKeywords = "characterKeywords";
-		public const string GenerationEnglish = "generationEnglish";
-		public const string GenerationJapanese = "generationJapanese";
 
 		public const string StageCategory = "stageCategory";
-		public const string StageCategoryJapanese = "stageCategoryJapanese";
+		public const string StageCategoryJapanese = "stageCategoryDisplayName";
 		public const string StageKeywords = "stageKeywords";
 
 		public static List<string> PropColumnsPropertyNames = new List<string>()
@@ -169,8 +75,8 @@ namespace StudioResource.Editor.Domain
 				DisplayName,
 				ResourceName,
 				ResourceType,
-				GenerationEnglish,
-				GenerationJapanese,
+				GenerationKeyword,
+				GenerationDisplayName,
 				CharacterKeywords,
 				IsVisiable,
 				PermissionKeywords,

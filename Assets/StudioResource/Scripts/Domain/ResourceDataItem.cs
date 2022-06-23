@@ -126,8 +126,8 @@ namespace StudioResource.Domain
         public string displayName;
         public string resourceName;
         public ResourceFileType resourceType;
-        public CharacterGeneration generationEnglish;
-        public string generationJapanese;
+        public CharacterGeneration generationKeyword;
+        public string generationDisplayName;
         public CharacterKeywords characterKeywords;
         public bool isVisiable;
         public PermissionKeywords permissionKeywords;
@@ -141,7 +141,7 @@ namespace StudioResource.Domain
         public string resourceName;
         public ResourceFileType resourceType;
         public StageCategory stageCategory;
-        public string stageCategoryJapanese;
+        public string stageCategoryDisplayName;
         public StageKeywords stageKeywords;
         public StageGimmickKeywords gimmickKeywords;
         public bool isVisiable;
@@ -161,5 +161,33 @@ namespace StudioResource.Domain
         public bool isVisiable;
         public PermissionKeywords permissionKeywords;
         public string externalId;
+    }
+
+
+    public static class ResourceTableConstValue
+    {
+        public static Dictionary<CharacterGeneration, string> CharacterGenerationMapper = new Dictionary<CharacterGeneration, string>()
+            {
+                { CharacterGeneration.Hololive_0, "ホロライブ0期生"},
+                { CharacterGeneration.Hololive_1, "ホロライブ1期生"},
+                { CharacterGeneration.Hololive_2, "ホロライブ2期生"},
+                { CharacterGeneration.Hololive_3, "ホロライブ3期生"},
+                { CharacterGeneration.Hololive_4, "ホロライブ4期生"},
+                { CharacterGeneration.Hololive_5, "ホロライブ5期生"},
+                { CharacterGeneration.Holo_Gamer, "ホロゲーマー"},
+                { CharacterGeneration.Holo_X, "ホロX"},
+                { CharacterGeneration.HololiveEN_1, "ホロEN1期生"},
+                { CharacterGeneration.HololiveEN_Hope, "ホロEN_HOPE"},
+                { CharacterGeneration.HololiveEN_2, "ホロEN2期生"},
+                { CharacterGeneration.HololiveID_1, "ホロID1期生"},
+                { CharacterGeneration.HololiveID_2, "ホロID2期生"},
+                { CharacterGeneration.HololiveID_3, "ホロID3期生"},
+                { CharacterGeneration.Staff, "Staff"},
+                { CharacterGeneration.HoloStars_1, "ホロスターズ1期生"},
+                { CharacterGeneration.HoloStars_2, "ホロスターズ2期生"},
+                { CharacterGeneration.HoloStars_3, "ホロスターズ3期生"},
+                { CharacterGeneration.HoloStars_UPR, "ホロスターズUPROAR"},
+                { CharacterGeneration.Guest, "ゲスト"},
+            };
     }
 }
